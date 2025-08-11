@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/kenntheswe/static/css/main.bea8e45f.css",
-    "main.js": "/kenntheswe/static/js/main.affecd77.js",
-    "static/js/787.a1fbcab3.chunk.js": "/kenntheswe/static/js/787.a1fbcab3.chunk.js",
-    "static/media/baiku.png": "/kenntheswe/static/media/baiku.ded5e47bc321029968cc.png",
-    "static/media/profile.jpg": "/kenntheswe/static/media/profile.8181dd00a3caa440960a.jpg",
-    "static/media/reactGiphy.png": "/kenntheswe/static/media/reactGiphy.f4c2a991df9eb8fc0fcf.png",
-    "static/media/watchlist.png": "/kenntheswe/static/media/watchlist.d7a82d0034ad8db72be3.png",
-    "static/media/studioFind.png": "/kenntheswe/static/media/studioFind.c6ef17ee683bf6ffe34e.png",
-    "static/media/logo.png": "/kenntheswe/static/media/logo.c5d20df81446131ada5b.png",
-    "index.html": "/kenntheswe/index.html",
-    "main.bea8e45f.css.map": "/kenntheswe/static/css/main.bea8e45f.css.map",
-    "main.affecd77.js.map": "/kenntheswe/static/js/main.affecd77.js.map",
-    "787.a1fbcab3.chunk.js.map": "/kenntheswe/static/js/787.a1fbcab3.chunk.js.map"
+    "main.css": "/kennghuser/static/css/main.bea8e45f.css",
+    "main.js": "/kennghuser/static/js/main.83c87a79.js",
+    "static/js/584.9072f050.chunk.js": "/kennghuser/static/js/584.9072f050.chunk.js",
+    "static/media/baiku.png": "/kennghuser/static/media/baiku.ded5e47bc321029968cc.png",
+    "static/media/profile.jpg": "/kennghuser/static/media/profile.8181dd00a3caa440960a.jpg",
+    "static/media/reactGiphy.png": "/kennghuser/static/media/reactGiphy.f4c2a991df9eb8fc0fcf.png",
+    "static/media/watchlist.png": "/kennghuser/static/media/watchlist.d7a82d0034ad8db72be3.png",
+    "static/media/studioFind.png": "/kennghuser/static/media/studioFind.c6ef17ee683bf6ffe34e.png",
+    "static/media/logo.png": "/kennghuser/static/media/logo.c5d20df81446131ada5b.png",
+    "index.html": "/kennghuser/index.html",
+    "main.bea8e45f.css.map": "/kennghuser/static/css/main.bea8e45f.css.map",
+    "main.83c87a79.js.map": "/kennghuser/static/js/main.83c87a79.js.map",
+    "584.9072f050.chunk.js.map": "/kennghuser/static/js/584.9072f050.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bea8e45f.css",
-    "static/js/main.affecd77.js"
+    "static/js/main.83c87a79.js"
   ]
 }
