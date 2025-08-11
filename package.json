@@ -1,26 +1,26 @@
 {
-  "homepage": "https://kenntheswe.github.io/kenntheswe",
+  "homepage": "https://kennghuser.github.io/kennghuser",
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^5.9.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "@craco/craco": "7.1.0",
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "12.1.5",
+    "@testing-library/user-event": "12.8.3",
     "aos": "^2.3.4",
-    "autoprefixer": "^9",
-    "caniuse-lite": "^1.0.30001267",
-    "emailjs-com": "^3.1.0",
+    "autoprefixer": "^10",
+    "caniuse-lite": "^1.0.30001734",
+    "emailjs-com": "^3.2.0",
     "postcss": "^8",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-preset-env": "^9.3.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "^5.0.1",
-    "react-scroll": "^1.8.2",
+    "postcss-preset-env": "^10.2.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.9.3",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^5.1.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -49,6 +49,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.0"
+    "gh-pages": "^6.3.0"
   }
 }
