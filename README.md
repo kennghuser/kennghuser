@@ -7,7 +7,7 @@
 
 > Kenn's portfolio showcasing a lil about Kenn
 
-### 🏠 [Homepage](https://kenntheswe.github.io/kenntheswe/)
+### 🏠 [Homepage](https://kennghuser.github.io/kennghuser/)
 
 ## Install
 
@@ -34,12 +34,12 @@ npm run test
 
 👤 **Kenn**
 
-* Website: [url](https://kenntheswe.github.io/kenntheswe/)
-* Github: [@kenntheswe](https://github.com/kenntheswe)
+* Website: [url](https://kennghuser.github.io/kennghuser/)
+* Github: [@kennghuser](https://github.com/kennghuser)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/kenntheswe/portfolio/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/kennghuser/portfolio/issues). 
 
 ## Show your support
 
