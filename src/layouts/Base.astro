@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="mx-auto flex w-full max-w-3xl items-center justify-between px-6 py-6">
+      <a href="/" class="text-sm font-semibold tracking-wide">KENN<span class="text-accent">.</span></a>
+      <nav class="flex gap-6 text-sm text-fog">
+        <a class="transition-colors hover:text-paper" href="/#work">Work</a>
+        <a class="transition-colors hover:text-paper" href="/#about">About</a>
+        <a class="transition-colors hover:text-paper" href="/#contact">Contact</a>
+      </nav>
+    </header>
+    <main class="mx-auto w-full max-w-3xl px-6">
+      <slot />
+    </main>
+    <footer class="mx-auto flex w-full max-w-3xl flex-wrap items-center justify-between gap-3 px-6 py-10 text-xs text-fog">
+      <span>© {year} Kenn — Tokyo, Japan</span>
+      <span>Built with Astro. Set in system type, on purpose.</span>
+    </footer>
+  </body>
+</html>
