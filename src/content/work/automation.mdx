@@ -1,0 +1,23 @@
+---
+title: "Dependabot automation across 20 repositories"
+role: "Engineer"
+period: "2026 — present"
+summary: "A daily security-upkeep system for my own GitHub: 2,213 locked dependencies scanned against the OSV/GHSA advisory database, findings triaged in a dashboard, config PRs opened automatically — merges always left to a human."
+tags: ["GitHub Actions", "Dependabot", "OSV / GHSA", "Security automation"]
+order: 4
+links: []
+---
+
+## Problem
+
+Twenty repositories' dependencies do not stay safe by hand. Vulnerabilities land daily; checking every repo manually means it never happens.
+
+## Approach
+
+- **Scan daily.** Every locked dependency across all 20 repos (2,213 on the first pass) is checked against the OSV/GHSA advisory database. First scan: 83 critical and 492 high findings, most in dormant tutorial repos — now visible and triaged instead of unknown.
+- **Dashboard, not noise.** Findings and open Dependabot PRs are tracked in one private view, so attention goes to the active repos first.
+- **Automate the safe parts.** A daily job opens config PRs adding `dependabot.yml` to repos missing one, and a guarded auto-merge workflow handles Dependabot security updates that pass CI.
+
+## The guardrails are the point
+
+The system never merges my code, never pushes to a default branch, and never changes a repo setting. Automation earns trust by staying inside its fence — human review remains exactly where it matters: the merge button.

@@ -1,0 +1,96 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+
+const stack = [
+  { layer: 'Front-end', items: 'TypeScript, React, Next.js, Vite, Tailwind CSS' },
+  { layer: 'Back-end', items: 'Supabase (Auth, Postgres, realtime), REST & WebSocket APIs, Node.js, middleware & OpenAPI contracts' },
+  { layer: 'AI & automation', items: 'AI-assisted development workflow, programmatic content generation, scheduled publishing systems, Dependabot automation across 20 repos' },
+  { layer: 'Testing / quality', items: 'Jest, Playwright, Vitest, Testing Library — 90%+ coverage on production work' },
+  { layer: 'Shipping', items: 'GitHub Actions, Vercel / Cloudflare Pages, pnpm' },
+];
+---
+
+<Base
+  title="Kenn — Full-Stack, AI-Driven Developer in Tokyo"
+  description="Full-stack, AI-driven developer in Tokyo. Developer at Japannext; builder of Kanji Daily and the automation systems behind it."
+>
+  <section class="pb-16 pt-10">
+    <p class="text-sm uppercase tracking-[0.2em] text-accent">Tokyo, Japan</p>
+    <h1 class="mt-4 font-serif text-5xl leading-[1.05] sm:text-6xl">
+      Full-stack, AI-driven developer.
+    </h1>
+    <p class="mt-6 max-w-xl text-lg leading-relaxed text-fog">
+      I'm Kenn, a developer at Japannext. I build web products end-to-end — React/TypeScript
+      front-ends, APIs and middleware, data — and automate them with AI-driven pipelines, like
+      Kanji Daily, which publishes a new video to YouTube and Instagram every day without
+      manual work.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#work" class="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-ink transition-opacity hover:opacity-85">View work</a>
+      <a href="#contact" class="rounded-full border border-line px-5 py-2.5 text-sm font-semibold transition-colors hover:border-fog">Contact</a>
+    </div>
+  </section>
+
+  <section id="work" class="border-t border-line py-14">
+    <h2 class="text-sm uppercase tracking-[0.2em] text-fog">Featured work</h2>
+    <div class="mt-8 space-y-4">
+      {work.map((entry) => (
+        <a href={`/work/${entry.id}`} class="group block rounded-2xl border border-line bg-panel p-6 transition-colors hover:border-fog">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 class="font-serif text-2xl group-hover:text-accent">{entry.data.title}</h3>
+            <span class="text-xs uppercase tracking-wider text-fog">{entry.data.period}</span>
+          </div>
+          <p class="mt-3 leading-relaxed text-fog">{entry.data.summary}</p>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {entry.data.tags.map((tag) => (
+              <li class="rounded-full border border-line px-3 py-1 text-xs text-fog">{tag}</li>
+            ))}
+          </ul>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section id="about" class="border-t border-line py-14">
+    <h2 class="text-sm uppercase tracking-[0.2em] text-fog">About</h2>
+    <p class="mt-6 max-w-xl text-lg leading-relaxed">
+      Full-stack developer based in Tokyo, working at Japannext Co., Ltd. I work across the
+      stack — interfaces, APIs, databases, deployment — and I use AI tooling and automation as
+      a core part of how I build, not an afterthought. Outside work I run Kanji Daily, a daily
+      Japanese-learning series produced and published by a pipeline I designed.
+    </p>
+    {/* TODO(kenn): years of experience + Japannext start date go here when you want them public. */}
+  </section>
+
+  <section class="border-t border-line py-14">
+    <h2 class="text-sm uppercase tracking-[0.2em] text-fog">Stack</h2>
+    <dl class="mt-8 space-y-5">
+      {stack.map((row) => (
+        <div class="grid gap-1 sm:grid-cols-[160px_1fr] sm:gap-6">
+          <dt class="font-semibold">{row.layer}</dt>
+          <dd class="leading-relaxed text-fog">{row.items}</dd>
+        </div>
+      ))}
+    </dl>
+    <p class="mt-8 text-sm leading-relaxed text-fog">
+      This site: Astro + MDX content collections — the right tool for a content site, ~0 KB of
+      JavaScript by default. The move away from Next.js was a deliberate engineering choice, not
+      a rewrite for its own sake.
+    </p>
+  </section>
+
+  <section id="contact" class="border-t border-line py-14">
+    <h2 class="text-sm uppercase tracking-[0.2em] text-fog">Contact</h2>
+    <ul class="mt-6 space-y-3 text-lg">
+      <li><a class="text-accent underline-offset-4 hover:underline" href="https://github.com/kennghuser">GitHub — @kennghuser</a></li>
+      <li><a class="text-accent underline-offset-4 hover:underline" href="https://youtube.com/@kanjidaily">YouTube — Kanji Daily</a></li>
+      {/* TODO(kenn): replace these placeholders with your real LinkedIn URL and public email. */}
+      <li class="text-fog">LinkedIn — <span class="italic">link coming soon</span></li>
+      <li class="text-fog">Email — <span class="italic">address coming soon</span></li>
+      {/* TODO(kenn): add CV PDF link once the updated CV is ready. */}
+    </ul>
+  </section>
+</Base>
