@@ -14,23 +14,35 @@ const year = new Date().getFullYear();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>{title}</title>
   </head>
-  <body>
-    <header class="mx-auto flex w-full max-w-3xl items-center justify-between px-6 py-6">
-      <a href="/" class="text-sm font-semibold tracking-wide">KENN<span class="text-accent">.</span></a>
-      <nav class="flex gap-6 text-sm text-fog">
-        <a class="transition-colors hover:text-paper" href="/#work">Work</a>
-        <a class="transition-colors hover:text-paper" href="/#about">About</a>
-        <a class="transition-colors hover:text-paper" href="/#contact">Contact</a>
-      </nav>
+  <body class="glow">
+    <header class="sticky top-0 z-40 border-b border-line-soft/70 bg-ink/75 backdrop-blur-xl">
+      <div class="mx-auto flex w-full max-w-4xl items-center justify-between px-6 py-4">
+        <a href="/" class="font-display text-base font-bold tracking-tight">
+          KENN<span class="text-accent">.</span><span class="ml-2 hidden text-xs font-medium uppercase tracking-[0.18em] text-faint sm:inline">Tokyo</span>
+        </a>
+        <nav class="flex items-center gap-7 text-sm text-fog">
+          <a class="transition-colors hover:text-paper" href="/#work">Work</a>
+          <a class="transition-colors hover:text-paper" href="/#about">About</a>
+          <a class="rounded-full border border-line px-4 py-1.5 font-medium text-paper transition-colors hover:border-accent hover:text-accent" href="/#contact">Contact</a>
+        </nav>
+      </div>
     </header>
-    <main class="mx-auto w-full max-w-3xl px-6">
+    <main class="mx-auto w-full max-w-4xl px-6">
       <slot />
     </main>
-    <footer class="mx-auto flex w-full max-w-3xl flex-wrap items-center justify-between gap-3 px-6 py-10 text-xs text-fog">
-      <span>© {year} Kenn — Tokyo, Japan</span>
-      <span>Built with Astro. Set in system type, on purpose.</span>
+    <footer class="border-t border-line-soft">
+      <div class="mx-auto flex w-full max-w-4xl flex-wrap items-center justify-between gap-3 px-6 py-10 text-xs text-faint">
+        <span>© {year} Kenn — Tokyo, Japan</span>
+        <span>Built with Astro · Deployed on Vercel</span>
+      </div>
     </footer>
   </body>
 </html>
