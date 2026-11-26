@@ -5,8 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.new/config
 export default defineConfig({
-  // TODO(kenn): set to the production domain once chosen.
-  site: 'https://kennghuser.example.com',
+  // Production URL (Vercel). Change this if a custom domain is added.
+  site: 'https://kennghuser.vercel.app',
   integrations: [mdx()],
   vite: {
     plugins: [tailwindcss()],
